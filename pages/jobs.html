@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وظائف مطحن البراق</title>
+    <meta
+      name="description"
+      content="انضم إلينا وكن جزءًا من فريقنا المتحمس والمبتكر. سواء كنت مبتدئًا أو محترفًا، نرحب بك للانضمام والمساهمة في بيئة عمل ملهمة.
+
+"
+    />
+    <meta
+      name="keywords"
+      content="مهندسين, فنيين, طحان,  عمال, مشرفين, مدراء"
+    />
+    <meta name="author" content="مطحن البراق" />
+
+    <link
+      rel="icon"
+      type="image/webp"
+      href="../assets/product/logo-icon.webp"
+    />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playpen+Sans+Arabic:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body dir="rtl" class="font-cairo">
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="relative w-full top-0 z-50 h-24 shadow-md text-accent bg-primary"
+    >
+      <div
+        class="flex items-center justify-between px-6 py-4 md:justify-start md:space-x-8"
+      >
+        <!-- Small screens order: Burger, Logo, Language -->
+        <div
+          class="flex justify-between items-center w-full space-x-4 md:hidden"
+        >
+          <!-- Burger -->
+          <div id="menu-btn" class="size-6 relative cursor-pointer">
+            <span
+              class="absolute w-full h-0.5 bg-accent top-0 left-0 transition-all"
+            ></span>
+            <span
+              class="absolute w-full h-0.5 bg-accent top-1/2 left-0 -translate-y-1/2 transition-all"
+            ></span>
+            <span
+              class="absolute w-full h-0.5 bg-accent bottom-0 left-0 transition-all"
+            ></span>
+          </div>
+          <!-- Logo -->
+          <a href="../index.html" class="size-14" title="home page"
+            ><img
+              decoding="async"
+              src="../assets/product/logo.webp"
+              class="w-full h-full rounded-full"
+              alt="logo"
+          /></a>
+          <!-- Language -->
+          <button
+            id="langButtonSm"
+            class="langBtn px-2 py-1 border rounded cursor-pointer"
+          >
+            EN
+          </button>
+        </div>
+
+        <!-- Large screens: Logo then Menu Links then Language -->
+        <div class="hidden md:flex md:items-center md:justify-between w-full">
+          <!-- Logo -->
+          <a title="home page" href="../index.html" class="size-16"
+            ><img
+              decoding="async"
+              src="../assets/product/logo.webp"
+              class="w-full h-full rounded-full"
+              alt="logo"
+          /></a>
+          <!-- Menu Links -->
+          <ul id="lg-menu" class="flex space-x-6 mr-8">
+            <li>
+              <a
+                title="home page"
+                href="../index.html"
+                class="hover:text-white"
+                data-key="nav_main"
+                >الرئيسية</a
+              >
+            </li>
+            <li>
+              <a
+                title="about page"
+                href="about.html"
+                class="hover:text-white"
+                data-key="nav_about"
+                >من نحن</a
+              >
+            </li>
+            <li>
+              <a
+                title="product page"
+                href="product.html"
+                class="hover:text-white"
+                data-key="nav_products"
+                >المنتجات</a
+              >
+            </li>
+            <li>
+              <a
+                title="jobs page"
+                href="jobs.html"
+                class="hover:text-white"
+                data-key="nav_jobs"
+                >الوظائف</a
+              >
+            </li>
+            <li>
+              <a
+                title="quality page"
+                href="quality.html"
+                class="hover:text-white"
+                data-key="nav_quality"
+                >الجودة</a
+              >
+            </li>
+            <li>
+              <a
+                title="contact-us page"
+                href="contact.html"
+                class="hover:text-white"
+                data-key="nav_contact"
+                >تواصل معنا</a
+              >
+            </li>
+          </ul>
+          <!-- Language -->
+          <button
+            id="langButtonLg"
+            class="langBtn px-2 py-1 border rounded cursor-pointer"
+          >
+            EN
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Overlay + blur -->
+    <div
+      id="menu-overlay"
+      class="fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 z-40 md:hidden"
+    ></div>
+    <!-- Mobile Fullscreen Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-transparent mt-24 z-50 md:hidden flex flex-col transform translate-y-full opacity-0 transition-all duration-300"
+    >
+      <div class="flex justify-between items-center px-6 py-4 shadow-md">
+        <span class="font-bold text-accent text-lg" data-key="menuhead"
+          >القائمة</span
+        >
+        <button
+          id="close-btn"
+          class="text-3xl cursor-pointer text-accent leading-none"
+        >
+          &times;
+        </button>
+      </div>
+      <ul class="flex flex-col gap-6 text-center mt-10 text-lg font-medium">
+        <li>
+          <a
+            title="main page"
+            href="../index.html"
+            data-key="nav_main"
+            class="transition hover:text-accent"
+            >الرئيسية</a
+          >
+        </li>
+        <li>
+          <a
+            title="about page"
+            href="about.html"
+            data-key="nav_about"
+            class="transition hover:text-accent"
+            >من نحن</a
+          >
+        </li>
+        <li>
+          <a
+            title="product page"
+            href="product.html"
+            data-key="nav_products"
+            class="transition hover:text-accent"
+            >المنتجات</a
+          >
+        </li>
+        <li>
+          <a
+            title="jobs page"
+            href="jobs.html"
+            data-key="nav_jobs"
+            class="transition hover:text-accent"
+            >الوظائف</a
+          >
+        </li>
+        <li>
+          <a
+            title="quality page"
+            href="quality.html"
+            data-key="nav_quality"
+            class="transition hover:text-accent"
+            >الجودة</a
+          >
+        </li>
+        <li>
+          <a
+            title="contact page"
+            href="contact.html"
+            data-key="nav_contact"
+            class="transition hover:text-accent"
+            >تواصل معنا</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- main section  -->
+
+    <!-- apply for job  -->
+    <main class="py-20 bg-primary text-accent">
+      <div class="container mx-auto space-y-8">
+        <!-- العنوان والمقدمة -->
+        <div class="text-center mb-20">
+          <h1
+            class="text-3xl md:text-4xl font-bold mb-6"
+            data-key="jobs_heading_h"
+          >
+            نرحب بكم للانضمام لفريقنا
+          </h1>
+          <p
+            class="text-lg md:text-xl text-primaryLight"
+            data-key="jobs_heading_p"
+          >
+            انضم إلينا وكن جزءًا من فريقنا المتحمس والمبتكر. سواء كنت مبتدئًا أو
+            محترفًا، نرحب بك للانضمام والمساهمة في بيئة عمل ملهمة.
+          </p>
+        </div>
+
+        <!-- الرسالة لو مفيش وظائف -->
+        <div
+          id="no-jobs"
+          data-key="no_jobs"
+          class="p-6 text-center bg-gray-100 rounded text-accent font-semibold"
+        >
+          لا توجد وظائف متاحة حاليا
+        </div>
+        <h2
+          id="availabe-jobs"
+          data-key="available_jobs"
+          class="w-full text-accent font-bold text-2xl"
+        >
+          الوظائف المتاحة:
+        </h2>
+        <!-- قائمة الوظائف -->
+        <div id="jobs-list" class="space-y-4"></div>
+
+        <!-- فورم التقديم -->
+        <div class="border rounded-lg bg-white p-6 shadow">
+          <form
+            id="job-form"
+            action="https://formsubmit.co/a.moetaz81@gmail.com"
+            method="POST"
+            enctype="multipart/form-data"
+            class="space-y-4"
+            autocomplete="on"
+          >
+            <input type="hidden" name="_subject" value="طلب وظيفة جديد" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="job_id" id="form-job-id" value="" />
+
+            <div>
+              <label
+                class="block mb-1 font-medium text-primary"
+                data-key="form_name"
+                for="fname-lname"
+                >الاسم</label
+              >
+              <input
+                id="fname-lname"
+                type="text"
+                name="name"
+                autocomplete="name"
+                required
+                class="w-full border rounded p-2 text-primary"
+              />
+            </div>
+
+            <div>
+              <label
+                class="block mb-1 font-medium text-primary"
+                data-key="your_mobile"
+                for="teleph"
+                >رقم الموبايل</label
+              >
+              <input
+                id="teleph"
+                type="tel"
+                name="phone"
+                autocomplete="tel"
+                required
+                class="w-full border rounded p-2 text-primary"
+              />
+            </div>
+
+            <div>
+              <label
+                class="block mb-1 font-medium text-primary"
+                data-key="contact_email"
+                for="email-address"
+                >البريد الإلكتروني
+              </label>
+              <input
+                id="email-address"
+                type="email"
+                name="email"
+                autocomplete="email"
+                required
+                class="w-full border rounded p-2 text-primary"
+              />
+            </div>
+
+            <div>
+              <label
+                class="block mb-1 font-medium text-primary"
+                data-key="jobs_job"
+                for="job-select"
+                >الوظيفة</label
+              >
+              <select
+                id="job-select"
+                name="job_title"
+                class="w-full border rounded p-2 text-primary"
+              >
+                <option value="" data-key="pick_job">اختر الوظيفة</option>
+              </select>
+            </div>
+
+            <div>
+              <label
+                class="block mb-1 font-medium text-primary"
+                data-key="uploadcv"
+                for="cv-file"
+                >تحميل السيرة الذاتية (اختياري)</label
+              >
+              <input
+                id="cv-file"
+                type="file"
+                name="cv"
+                class="w-full border rounded p-2 text-primary"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="bg-accent mx-auto block w-fit cursor-pointer text-white px-4 py-2 rounded font-semibold hover:bg-accent-dark transition"
+              data-key="apply_now"
+            >
+              قدم الآن
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- scroll to top button  -->
+    <button
+      id="scrollToTop"
+      class="fixed bottom-8 right-8 cursor-pointer rounded-full shadow-lg hover:bg-primaryLight bg-primary transition-all duration-300 hidden z-40 p-5 size-fit"
+      title="Scroll to Top"
+    >
+      <i
+        class="fa-solid fa-angles-up text-accent absolute top-1/2 left-1/2 -translate-1/2 text-2xl"
+      ></i>
+    </button>
+    <!-- Footer -->
+    <footer class="flex flex-col w-full">
+      <div
+        class="up bg-primaryLight flex flex-col justify-evenly items-center p-2 sm:flex-row sm:justify-evenly"
+      >
+        <div class="whoAreWe mb-5 sm:mb-0 sm:w-1/4">
+          <h3 class="text-accent font-bold" data-key="footer_up_heading">
+            مطحن البراق
+          </h3>
+          <p
+            class="text-textDark text-sm leading-8"
+            data-key="footer_up_paragraph"
+          >
+            تم تأسيس المطحن عام 2020م و خلال فترة قصيرة صار من المصانع الرائدة
+            في إنتاج الدقيق و الردة بجودة عالية و بتقنيات حديثة.
+          </p>
+        </div>
+        <div class="mapInfo mb-5 sm:mb-0 sm:w-1/4">
+          <div class="w-full h-60 rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3521.8362723589485!2d30.862760200000007!3d28.0294796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b291740996121%3A0x77b0e77ff1ab99be!2z2LTYsdmD2Kkg2YXYt9it2YYg2KfZhNio2LHYp9mC!5e0!3m2!1sen!2seg!4v1769190217300!5m2!1sen!2seg"
+              class="w-full h-full border-0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="our factory location"
+            >
+              ></iframe
+            >
+          </div>
+        </div>
+        <div
+          class="ourContactInfo flex flex-col justify-evenly items-center sm:w-1/4"
+        >
+          <p class="text-primary mb-1">alburaqmill1@gmail.com</p>
+          <p class="text-primary mb-1">201033091778+</p>
+          <p
+            class="text-primary mb-1 text-sm leading-8"
+            data-key="footer_down_address"
+          >
+            مركز المنيا,المنيا الجديدة, المنطقة الصناعية, بجوار المعهد العالي
+            للنظم و المعلومات (EST)
+          </p>
+          <div
+            class="socialMedia flex flex-row justify-center items-center gap-4"
+          >
+            <a
+              title="our facebook page"
+              class="transition-all text-xl text-primary hover:text-accent"
+              target="_blank"
+              href="https://www.facebook.com/p/%D9%85%D8%B7%D8%AD%D9%86-%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%82-100092138415311/?locale=ar_AR"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              title="our linkedin page"
+              class="transition-all text-xl text-primary hover:text-accent"
+              target="_blank"
+              href="https://www.linkedin.com/company/alburaq/"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              title="to our whatsapp chat"
+              class="transition-all text-xl text-primary hover:text-accent"
+              target="_blank"
+              href="https://wa.me/201033091778?text=السلام%20عليكم%20مطلوب%20استفسار%20عن%20المنتجات"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="down bg-primary text-accent text-center py-6 font-bold">
+        Copyright &copy; 2026 Muhammad Fakhry
+      </div>
+    </footer>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/job.js"></script>
+  </body>
+</html>

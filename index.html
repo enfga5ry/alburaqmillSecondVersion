@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="المطحن البراق - أفضل أنواع الدقيق والمنتجات المطحونة في مصر. منتجات طازجة وبجودة عالية."
+    />
+    <meta name="author" content="مطحن البراق" />
+
+    <meta
+      name="keywords"
+      content="طحين, ردة, دقيق, مطحن البراق, مصر, سن, سميد"
+    />
+    <title>مطحن البراق \ Alburaq Mill</title>
+
+    <link rel="icon" type="image/webp" href="assets/product/logo-icon.webp" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playpen+Sans+Arabic:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body dir="rtl" class="overflow-hidden font-cairo">
+    <!-- ================= Preloader ================= -->
+    <div
+      id="preloader"
+      class="fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-700"
+    >
+      <div class="flex flex-col items-center gap-6">
+        <!-- Logo -->
+        <img
+          decoding="async"
+          src="assets/product/logo.webp"
+          alt="Alburaq Mill logo"
+          class="w-20 h-20 rounded-full animate-pulse"
+        />
+
+        <!-- Spinner -->
+        <div
+          class="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"
+        ></div>
+
+        <p class="text-sm text-gray-500 animate-pulse" data-key="preloader_msg">
+          جاري تحميل الموقع...
+        </p>
+      </div>
+    </div>
+    <!-- ================================================= -->
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="sticky top-0 z-50 h-24 shadow-md text-accent bg-primary"
+    >
+      <div
+        class="flex items-center justify-between px-6 py-4 md:justify-start md:space-x-8"
+      >
+        <!-- Small screens order: Burger, Logo, Language -->
+        <div
+          class="flex justify-between items-center w-full space-x-4 md:hidden"
+        >
+          <!-- Burger -->
+          <div id="menu-btn" class="size-6 relative cursor-pointer">
+            <span
+              class="absolute w-full h-0.5 bg-accent top-0 left-0 transition-all"
+            ></span>
+            <span
+              class="absolute w-full h-0.5 bg-accent top-1/2 left-0 -translate-y-1/2 transition-all"
+            ></span>
+            <span
+              class="absolute w-full h-0.5 bg-accent bottom-0 left-0 transition-all"
+            ></span>
+          </div>
+          <!-- Logo -->
+          <a href="index.html" title="home-page" class="size-14"
+            ><img
+              decoding="async"
+              src="assets/product/logo.webp"
+              class="w-full h-full rounded-full"
+              alt="logo"
+          /></a>
+          <!-- Language -->
+          <button
+            id="langButtonSm"
+            class="langBtn px-2 py-1 border rounded cursor-pointer"
+          >
+            EN
+          </button>
+        </div>
+
+        <!-- Large screens: Logo then Menu Links then Language -->
+        <div class="hidden md:flex md:items-center md:justify-between w-full">
+          <!-- Logo -->
+          <a href="index.html" title="home-page" class="size-16"
+            ><img
+              decoding="async"
+              src="assets/product/logo.webp"
+              class="w-full h-full rounded-full"
+              alt="logo"
+          /></a>
+          <!-- Menu Links -->
+          <ul id="lg-menu" class="flex space-x-6 mr-8">
+            <li>
+              <a
+                href="index.html"
+                title="home-page"
+                class="hover:text-white"
+                data-key="nav_main"
+                >الرئيسية</a
+              >
+            </li>
+            <li>
+              <a
+                title="about-page"
+                href="pages/about.html"
+                class="hover:text-white"
+                data-key="nav_about"
+                >من نحن</a
+              >
+            </li>
+            <li>
+              <a
+                title="products-page"
+                href="pages/product.html"
+                class="hover:text-white"
+                data-key="nav_products"
+                >المنتجات</a
+              >
+            </li>
+            <li>
+              <a
+                title="jobs-page"
+                href="pages/jobs.html"
+                class="hover:text-white"
+                data-key="nav_jobs"
+                >الوظائف</a
+              >
+            </li>
+            <li>
+              <a
+                title="quality-page"
+                href="pages/quality.html"
+                class="hover:text-white"
+                data-key="nav_quality"
+                >الجودة</a
+              >
+            </li>
+            <li>
+              <a
+                title="contact-page"
+                href="pages/contact.html"
+                class="hover:text-white"
+                data-key="nav_contact"
+                >تواصل معنا</a
+              >
+            </li>
+          </ul>
+          <!-- Language -->
+          <button
+            id="langButtonLg"
+            class="langBtn px-2 py-1 border rounded cursor-pointer"
+          >
+            EN
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Overlay + blur -->
+    <div
+      id="menu-overlay"
+      class="fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 z-40 md:hidden"
+    ></div>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-transparent mt-24 z-50 md:hidden flex flex-col transform translate-y-full opacity-0 transition-all duration-300"
+    >
+      <div class="flex justify-between items-center px-6 py-4 shadow-md">
+        <span class="font-bold text-accent text-lg" data-key="menuhead"
+          >القائمة</span
+        >
+        <button
+          id="close-btn"
+          class="text-3xl cursor-pointer text-accent leading-none"
+        >
+          &times;
+        </button>
+      </div>
+      <ul class="flex flex-col gap-6 text-center mt-10 text-lg font-medium">
+        <li>
+          <a
+            title="home-page"
+            href="index.html"
+            class="transition hover:text-accent"
+            data-key="nav_main"
+            >الرئيسية</a
+          >
+        </li>
+        <li>
+          <a
+            title="about-page"
+            href="pages/about.html"
+            class="transition hover:text-accent"
+            data-key="nav_about"
+            >من نحن</a
+          >
+        </li>
+        <li>
+          <a
+            title="products-page"
+            href="pages/product.html"
+            class="transition hover:text-accent"
+            data-key="nav_products"
+            >المنتجات</a
+          >
+        </li>
+        <li>
+          <a
+            title="jobs-page"
+            href="pages/jobs.html"
+            class="transition hover:text-accent"
+            data-key="nav_jobs"
+            >الوظائف</a
+          >
+        </li>
+        <li>
+          <a
+            title="quality-page"
+            href="pages/quality.html"
+            class="transition hover:text-accent"
+            data-key="nav_quality"
+            >الجودة</a
+          >
+        </li>
+        <li>
+          <a
+            title="contact-page"
+            href="pages/contact.html"
+            class="transition hover:text-accent"
+            data-key="nav_contact"
+            >تواصل معنا</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- Main Content -->
+    <main>
+      <!-- hero section  -->
+      <div
+        id="hero"
+        class="hero h-screen flex items-center justify-center relative overflow-hidden"
+      >
+        <!-- overlay  -->
+        <div class="absolute inset-0 bg-black/60 h-screen z-10 top-0"></div>
+
+        <!-- slides (background images) -->
+        <div
+          class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 z-0"
+        ></div>
+        <div
+          class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 z-0"
+        ></div>
+        <div
+          class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 z-0"
+        ></div>
+        <div
+          class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 z-0"
+        ></div>
+
+        <!-- content  -->
+        <div class="heroText text-center text-accent z-20 mb-24">
+          <h1
+            class="text-4xl md:text-6xl font-bold mb-10"
+            data-key="index_hero_h"
+          >
+            مرحبا بكم في مطحن البراق
+          </h1>
+          <p class="text-lg md:text-2xl mb-10" data-key="index_hero_p">
+            نقدم أفضل أنواع الدقيق والردة بجودة عالية وتقنيات حديثة
+          </p>
+          <a
+            title="products-page"
+            href="pages/product.html"
+            class="bg-accent text-primary px-4 md:px-6 py-2 md:py-4 rounded-full font-semibold hover:bg-secondary transition text-sm md:text-lg"
+            data-key="index_hero_btn"
+          >
+            اكتشف منتجاتنا
+          </a>
+        </div>
+      </div>
+
+      <!-- our numbers section -->
+      <section id="numSection" class="py-20 w-full">
+        <div class="container">
+          <div
+            class="numbers flex flex-col sm:flex-row justify-around items-center gap-8 flex-wrap"
+          >
+            <h2
+              class="w-full text-3xl md:text-4xl font-bold text-primary pb-8"
+              data-key="index_nums_h"
+            >
+              إحصائيات المصنع:
+            </h2>
+            <div class="number-box text-center">
+              <p class="text-2Xl font-bold text-primary">
+                <i class="fa-solid fa-industry text-2xl"></i>
+                <span class="text-4xl" data-target="350">350</span>
+                <strong data-key="index_nums_strong">طن</strong>
+              </p>
+              <p class="text-textDark mt-2" data-key="index_numone">
+                الطاقة اليومية للطحن
+              </p>
+            </div>
+            <div class="number-box text-center">
+              <p class="font-bold text-primary">
+                <i class="fa-solid fa-user-check text-2xl"></i>
+                <span class="text-4xl" data-target="150">150</span
+                ><strong>+</strong>
+              </p>
+              <p class="text-textDark mt-2" data-key="index_numtwo">
+                عميل راضٍ
+              </p>
+            </div>
+            <div class="number-box text-center">
+              <p class="text-2Xl font-bold text-primary">
+                <i class="fa-solid fa-database text-2xl"></i>
+                <span class="text-4xl" data-target="10000">10000</span>
+                <strong data-key="index_nums_strong">طن</strong>
+              </p>
+              <p class="text-textDark mt-2" data-key="index_numthree">
+                سعة الصوامع
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- why us section -->
+      <div
+        id="whyUs"
+        class="why-us py-20 w-full relative overflow-hidden"
+        style="
+          background-image: url(assets/grains.webp);
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="absolute inset-0 bg-black/70 h-full z-0 top-0"></div>
+        <div class="z-20 relative h-full">
+          <div class="container">
+            <h2
+              class="w-full text-3xl md:text-4xl font-bold text-accent pb-12"
+              data-key="index_why_heading_h"
+            >
+              لماذا مطحن البراق؟
+            </h2>
+            <div
+              class="why-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
+            >
+              <div class="why-card flex items-center gap-2">
+                <i class="fa-solid fa-computer text-accent text-2xl"></i>
+                <div class="why-info">
+                  <h3
+                    class="text-Xl font-bold text-primaryLight"
+                    data-key="index_why_one_h"
+                  >
+                    تكنولوجيا طحن متقدمة
+                  </h3>
+                  <p class="text-accent" data-key="index_why_one_p">
+                    استخدام أحدث السلندرات لضمان دقة و جودة الدقيق بشكل مستمر.
+                  </p>
+                </div>
+              </div>
+              <div class="why-card flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-2xl text-accent"></i>
+                <div class="why-info">
+                  <h3
+                    class="text-Xl font-bold text-primaryLight"
+                    data-key="index_why_two_h"
+                  >
+                    اختيار دقيق للقمح
+                  </h3>
+                  <p class="text-accent" data-key="index_why_two_p">
+                    فقط أفضل أنواع القمح، يتم فحصها واختيارها قبل الإنتاج.
+                  </p>
+                </div>
+              </div>
+              <div class="why-card flex items-center gap-2">
+                <i class="fa-solid fa-battery-full text-2xl text-accent"></i>
+                <div class="why-info">
+                  <h3
+                    class="text-Xl font-bold text-primaryLight"
+                    data-key="index_why_three_h"
+                  >
+                    قدرة إنتاجية عالية
+                  </h3>
+                  <p class="text-accent" data-key="index_why_three_p">
+                    12 سلندر و24 مرحلة طحن لتلبية احتياجات الإنتاج الكبيرة.
+                  </p>
+                </div>
+              </div>
+              <div class="why-card flex items-center gap-2">
+                <i class="fa-solid fa-ranking-star text-2xl text-accent"></i>
+                <div class="why-info">
+                  <h3
+                    class="text-Xl font-bold text-primaryLight"
+                    data-key="index_why_four_h"
+                  >
+                    ضمان الجودة
+                  </h3>
+                  <p class="text-accent" data-key="index_why_four_p">
+                    مراقبة مستمرة للبروتين والرطوبة لضمان مطابقة كل دفعة
+                    للمواصفات.
+                  </p>
+                </div>
+              </div>
+              <div class="why-card flex items-center gap-2">
+                <i class="fa-solid fa-truck text-2xl text-accent"></i>
+                <div class="why-info">
+                  <h3
+                    class="text-Xl font-bold text-primaryLight"
+                    data-key="index_why_five_p"
+                  >
+                    سلسلة توريد موثوقة
+                  </h3>
+                  <p class="text-accent" data-key="index_why_five_p">
+                    تسليم في الوقت المحدد ودعم لوجيستي للشركاء التجاريين.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- sample of products  -->
+      <div class="py-20 w-full">
+        <div class="container relative">
+          <h2
+            class="w-full text-3xl md:text-4xl font-bold text-primary pb-8"
+            data-key="index_sample_heading"
+          >
+            نبذة عن منتجاتنا
+          </h2>
+          <div
+            class="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] py-20 gap-4"
+          >
+            <div
+              class="mini-card mb-2 max-md:mx-auto shadow-xl w-fit rounded-2xl overflow-hidden group"
+            >
+              <div
+                class="flex justify-center items-center w-fit overflow-hidden"
+              >
+                <img
+                  decoding="async"
+                  class="size-80 group-hover:rotate-1 group-hover:scale-110 transition"
+                  src="assets/product/ali.webp"
+                  alt="sack of flour named ali"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="bg-gray-300 h-full group-hover:bg-stone-700 group-hover:text-amber-500 p-2 w-80"
+              >
+                <p data-key="index_sampleone">
+                  دقيق قمح استخراج 72%، مثالي للخبز الفينو الأصيل والبيتزا. نسبة
+                  الاستخراج المتوسطة تعطيك توازنًا رائعًا بين النعومة والقيمة
+                  الغذائية.
+                </p>
+              </div>
+            </div>
+            <div
+              class="mini-card mb-2 max-md:mx-auto shadow-xl w-fit rounded-2xl overflow-hidden group"
+            >
+              <div
+                class="flex justify-center items-center w-fit overflow-hidden"
+              >
+                <img
+                  decoding="async"
+                  class="size-80 group-hover:rotate-1 group-hover:scale-110 transition"
+                  src="assets/product/two.webp"
+                  alt="sack of smed"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="bg-gray-300 h-full group-hover:bg-stone-700 group-hover:text-amber-500 p-2 w-80"
+              >
+                <p data-key="index_sampletwo">
+                  سميد خشن طبيعي 100%، مصنوع من أجود أنواع القمح. أساس كل
+                  حلوياتك الشرقية من حلويات بالعسل إلى البسبوسة والكنافة.
+                </p>
+              </div>
+            </div>
+            <div
+              class="mini-card mb-2 max-md:mx-auto shadow-xl w-fit rounded-2xl overflow-hidden group"
+            >
+              <div
+                class="flex justify-center items-center w-fit overflow-hidden"
+              >
+                <img
+                  decoding="async"
+                  class="size-80 group-hover:rotate-1 group-hover:scale-110 transition"
+                  src="assets/product/7.webp"
+                  alt="sack of flour"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="bg-gray-300 h-full group-hover:bg-stone-700 group-hover:text-amber-500 p-2 w-80"
+              >
+                <p data-key="index_samplethree">
+                  دقيق قمح خاص بالمكرونة. نسبة البروتين العالية فيه تضمن عجينة
+                  مرنة وقوية، لتحضير مكرونة بيتية ممتازة القوام لا تنكسر عند
+                  السلق.
+                </p>
+              </div>
+            </div>
+            <div
+              class="mini-card mb-2 max-md:mx-auto shadow-xl w-fit rounded-2xl overflow-hidden group"
+            >
+              <div
+                class="flex justify-center items-center w-fit overflow-hidden"
+              >
+                <img
+                  decoding="async"
+                  class="size-80 group-hover:rotate-1 group-hover:scale-110 transition"
+                  src="assets/product/first.webp"
+                  alt="sack of flour"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="bg-gray-300 h-full group-hover:bg-stone-700 group-hover:text-amber-500 p-2 w-80"
+              >
+                <p data-key="index_samplefour">
+                  دقيق جلاش استخراج 72% نسبة الاستخراج تعطيك توازنًا رائعًا بين
+                  النعومة و القيمة الغذائية ثالي للجلاش و الفطائر و الكنافة
+                </p>
+              </div>
+            </div>
+          </div>
+          <a
+            title="products-page"
+            href="pages/product.html"
+            class="bg-accent text-primary px-4 md:px-6 py-2 md:py-4 rounded-full font-semibold hover:bg-secondary transition text-sm md:text-lg absolute right-1/2 translate-x-1/2"
+            data-key="index_samplebtn"
+          >
+            اكتشف المزيد</a
+          >
+        </div>
+      </div>
+      <!-- quality review  -->
+      <div
+        id="myQuality"
+        class="py-20 w-full relative overflow-hidden"
+        style="
+          background-image: url(assets/lap.webp);
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="absolute inset-0 bg-black/70 h-full z-0 top-0"></div>
+        <div class="z-20 relative h-full">
+          <div class="container">
+            <h2
+              class="w-full text-3xl md:text-4xl font-bold text-accent pb-8"
+              data-key="index_quality_heading"
+            >
+              جودة تستحق الثقة.. في كل كيلو
+            </h2>
+            <p
+              class="text-primaryLight indent-3 text-justify"
+              data-key="index_quality_paragraph"
+            >
+              في مصنعنا، الجودة ليست مجرد مرحلة، بل هي رحلة تبدأ باختيار أفضل
+              حبات القمح وتستمر حتى وصول المنتج النهائي إلى عملائنا. نحن نلتزم
+              بأعلى المعايير المحلية والدولية لضمان أن كل كيلو دقيق يخرج من
+              منشأتنا يحمل نفس القيمة الغذائية والنقاء والسلامة.
+            </p>
+            <ol class="text-accent list-decimal">
+              <li data-key="index_quality_lione">فحص المواد الخام</li>
+              <li data-key="index_quality_litwo">المراقبة أثناء الطحن</li>
+              <li data-key="index_quality_lithree">
+                فحص المنتج النهائي
+                <ul class="p-2 list-disc">
+                  <li data-key="index_quality_minilione">النقاوة و اللون</li>
+                  <li data-key="index_quality_minilitwo">معدل الرطوبة</li>
+                  <li data-key="index_quality_minilithree">
+                    قوة و معدل تكوين العجين
+                  </li>
+                  <li data-key="index_quality_minilifour">الخواص التخمرية</li>
+                  <li data-key="index_quality_minilifive">
+                    مطابقة المواصفات القياسية المصرية
+                  </li>
+                </ul>
+              </li>
+            </ol>
+            <p
+              class="text-primaryLight indent-3 text-justify leading-7 py-3"
+              data-key="index_quality_pone"
+            >
+              وراء كل هذه العمليات، يقف فريق من أمهر المهندسين والتقنيين
+              المتخصصين في تكنولوجيا الحبوب ومراقبة الجودة، مهمتهم الأولى هي
+              الحفاظ على ثقتكم.
+            </p>
+            <p
+              class="text-primaryLight indent-3 text-justify leading-7 pb-3"
+              data-key="index_quality_ptwo"
+            >
+              كل هذا الجهد لهدف واحد: تزويدكم بدقيق موثوق، ثابت الجودة، وآمن
+              تماماً لصناعة مخبوزات تتميز بالطعم الأصلي، والقوام المثالي،
+              والقيمة الغذائية العالية. جودة دقيقنا هي أساس جودة منتجاتكم.
+            </p>
+            <a
+              title="quality-page"
+              href="pages/quality.html"
+              class="bg-accent text-primary px-4 md:px-6 py-2 md:py-4 rounded-full font-semibold hover:bg-secondary transition text-sm md:text-lg absolute right-1/2 translate-x-1/2"
+              data-key="index_quality_btn"
+              >الجودة</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- our vision  -->
+      <section id="millingProcess" class="py-20 w-full overflow-hidden">
+        <div class="container mx-auto px-4">
+          <h2
+            class="w-full text-3xl md:text-4xl font-bold text-primary pb-6"
+            data-key="index_vision_heading"
+          >
+            عملية طحن دقيقة بمعايير عالمية
+          </h2>
+          <p
+            class="text-textDark max-w-2xl mb-12"
+            data-key="index_vision_paragraph"
+          >
+            نلتزم بعملية طحن متكاملة تضمن أعلى جودة للدقيق، مع تحكم كامل في كل
+            مرحلة من مراحل الإنتاج.
+          </p>
+
+          <!-- Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Item 1 -->
+            <div class="process-card from-left">
+              <div class="icon-box">
+                <i
+                  class="fa-solid fa-filter text-accent text-2xl font-bold"
+                ></i>
+              </div>
+              <h3 class="process-title" data-key="index_vision_boxone_h">
+                تنظيف القمح
+              </h3>
+              <p class="process-text" data-key="index_vision_boxone_p">
+                إزالة الشوائب والأتربة والمعادن لضمان خامة نقية وآمنة للطحن.
+              </p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="process-card from-right">
+              <div class="icon-box">
+                <i
+                  class="fa-solid fa-droplet text-accent text-2xl font-bold"
+                ></i>
+              </div>
+              <h3 class="process-title" data-key="index_vision_boxtwo_h">
+                الترطيب المتوازن
+              </h3>
+              <p class="process-text" data-key="index_vision_boxtwo_p">
+                إضافة المياه بنسب دقيقة لتحسين كفاءة الطحن والحفاظ على جودة
+                النخالة.
+              </p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="process-card from-left">
+              <div class="icon-box">
+                <i class="fa-solid fa-gear text-accent text-2xl font-bold"></i>
+              </div>
+              <h3 class="process-title" data-key="index_vision_boxthree_h">
+                الطحن المتدرج
+              </h3>
+              <p class="process-text" data-key="index_vision_boxthree_p">
+                تكسير القمح على مراحل مدروسة لفصل الإندوسبرم بكفاءة.
+              </p>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="process-card from-right">
+              <div class="icon-box">
+                <i
+                  class="fa-solid fa-layer-group text-accent text-2xl font-bold"
+                ></i>
+              </div>
+              <h3 class="process-title" data-key="index_vision_boxfour_h">
+                الغربلة والتنقية
+              </h3>
+              <p class="process-text" data-key="index_vision_boxfour_p">
+                فصل الدقيق والسميد باستخدام أنظمة غربلة عالية الدقة.
+              </p>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="process-card from-left">
+              <div class="icon-box">
+                <i
+                  class="fa-solid fa-sliders text-accent text-2xl font-bold"
+                ></i>
+              </div>
+              <h3 class="process-title" data-key="index_vision_boxfive_h">
+                الطحن النهائي
+              </h3>
+              <p class="process-text" data-key="index_vision_boxfive_p">
+                التحكم الكامل في درجة النعومة للوصول إلى دقيق مطابق للمواصفات.
+              </p>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="process-card from-right">
+              <div class="icon-box">
+                <i class="fa-solid fa-box text-accent text-2xl font-bold"></i>
+              </div>
+              <h3 class="process-title" data-key="index_vision_boxsix_h">
+                التعبئة والتخزين
+              </h3>
+              <p class="process-text" data-key="index_vision_boxsix_p">
+                تعبئة الدقيق في بيئة نظيفة تضمن الحفاظ على الجودة حتى التسليم.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section
+        id="cta"
+        class="py-20 relative w-full flex items-center justify-center"
+        style="
+          background-image: url(assets/cta.webp);
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/70 h-full top-0 z-0"></div>
+
+        <!-- Content -->
+        <div class="relative z-20 text-center px-4 md:px-8 max-w-2xl">
+          <h2
+            class="w-full text-3xl md:text-4xl font-bold text-accent pb-6"
+            data-key="index_cta_h"
+          >
+            ابدأ شراكتك مع مطحن البراق اليوم!
+          </h2>
+          <p
+            class="text-primaryLight leading-8 max-w-2xl mb-12"
+            data-key="index_cta_p"
+          >
+            نحن نقدم دقيق عالي الجودة بمواصفات صناعية دقيقة، مع التزام كامل
+            بالجودة وسرعة التوريد. <br />
+            تواصل معنا واحصل على أفضل العروض لشركتك.
+          </p>
+          <a
+            title="contact-us"
+            href="pages/contact.html"
+            class="bg-accent text-primary px-4 md:px-6 py-2 md:py-4 rounded-full font-semibold hover:bg-secondary transition text-sm md:text-lg absolute right-1/2 translate-x-1/2"
+            data-key="index_cta_btn"
+          >
+            اطلب عرض سعر</a
+          >
+        </div>
+      </section>
+    </main>
+    <!-- scroll to top button  -->
+    <button
+      id="scrollToTop"
+      class="fixed bottom-8 right-8 cursor-pointer rounded-full shadow-lg hover:bg-primaryLight bg-primary transition-all duration-300 hidden z-40 p-5 size-fit"
+      title="Scroll to Top"
+    >
+      <i
+        class="fa-solid fa-angles-up text-accent absolute top-1/2 left-1/2 -translate-1/2 text-2xl"
+      ></i>
+    </button>
+    <!-- Footer -->
+    <footer class="flex flex-col w-full">
+      <div
+        class="up bg-primaryLight flex flex-col justify-evenly items-center p-2 sm:flex-row sm:justify-evenly"
+      >
+        <div class="whoAreWe mb-5 sm:mb-0 sm:w-1/4">
+          <h3 class="text-accent font-bold" data-key="footer_up_heading">
+            مطحن البراق
+          </h3>
+          <p
+            class="text-textDark text-sm leading-8"
+            data-key="footer_up_paragraph"
+          >
+            تم تأسيس المطحن عام 2020م و خلال فترة قصيرة صار من المصانع الرائدة
+            في إنتاج الدقيق و الردة بجودة عالية و بتقنيات حديثة.
+          </p>
+        </div>
+        <div class="mapInfo mb-5 sm:mb-0 sm:w-1/4">
+          <div class="w-full h-60 rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3521.8362723589485!2d30.862760200000007!3d28.0294796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b291740996121%3A0x77b0e77ff1ab99be!2z2LTYsdmD2Kkg2YXYt9it2YYg2KfZhNio2LHYp9mC!5e0!3m2!1sen!2seg!4v1769190217300!5m2!1sen!2seg"
+              class="w-full h-full border-0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+              ></iframe
+            >
+          </div>
+        </div>
+        <div
+          class="ourContactInfo flex flex-col justify-evenly items-center sm:w-1/4"
+        >
+          <p class="text-primary mb-1">alburaqmill1@gmail.com</p>
+          <p class="text-primary mb-1">201033091778+</p>
+          <p
+            class="text-primary mb-1 text-sm leading-8"
+            data-key="footer_down_address"
+          >
+            مركز المنيا,المنيا الجديدة, المنطقة الصناعية, بجوار المعهد العالي
+            للنظم و المعلومات (EST)
+          </p>
+          <div
+            class="socialMedia flex flex-row justify-center items-center gap-4"
+          >
+            <a
+              title="our FaceBook page"
+              class="transition-all text-xl text-primary hover:text-accent"
+              target="_blank"
+              href="https://www.facebook.com/p/%D9%85%D8%B7%D8%AD%D9%86-%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%82-100092138415311/?locale=ar_AR"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              title="our Linkedin page"
+              class="transition-all text-xl text-primary hover:text-accent"
+              target="_blank"
+              href="https://www.linkedin.com/company/alburaq/"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              title="to our whatsapp chat"
+              class="transition-all text-xl text-primary hover:text-accent"
+              target="_blank"
+              href="https://wa.me/201033091778?text=السلام%20عليكم%20مطلوب%20استفسار%20عن%20المنتجات"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="down bg-primary text-accent text-center py-6 font-bold">
+        Copyright &copy; 2026 Muhammad Fakhry
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/home.js" defer></script>
+  </body>
+</html>

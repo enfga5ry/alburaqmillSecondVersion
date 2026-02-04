@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اتصل بمطحن البراق</title>
+    <meta
+      name="description"
+      content="لأي استفسارات أو طلبات، تواصل معنا عبر مطحن البراق. فريقنا جاهز للرد على جميع استفساراتك."
+    />
+    <meta
+      name="keywords"
+      content="اتصل, دعم, خدمة العملاء, مطحن البراق, طلبات"
+    />
+    <meta name="author" content="مطحن البراق" />
+
+    <link
+      rel="icon"
+      type="image/webp"
+      href="../assets/product/logo-icon.webp"
+    />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playpen+Sans+Arabic:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body dir="rtl" class="font-cairo">
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="relative w-full top-0 z-50 h-24 shadow-md text-accent bg-primary"
+    >
+      <div
+        class="flex items-center justify-between px-6 py-4 md:justify-start md:space-x-8"
+      >
+        <!-- Small screens order: Burger, Logo, Language -->
+        <div
+          class="flex justify-between items-center w-full space-x-4 md:hidden"
+        >
+          <!-- Burger -->
+          <div id="menu-btn" class="size-6 relative cursor-pointer">
+            <span
+              class="absolute w-full h-0.5 bg-accent top-0 left-0 transition-all"
+            ></span>
+            <span
+              class="absolute w-full h-0.5 bg-accent top-1/2 left-0 -translate-y-1/2 transition-all"
+            ></span>
+            <span
+              class="absolute w-full h-0.5 bg-accent bottom-0 left-0 transition-all"
+            ></span>
+          </div>
+          <!-- Logo -->
+          <a href="../index.html" class="size-14" title="home page"
+            ><img
+              decoding="async"
+              src="../assets/product/logo.webp"
+              class="w-full h-full rounded-full"
+              alt="logo"
+          /></a>
+          <!-- Language -->
+          <button
+            id="langButtonSm"
+            class="langBtn px-2 py-1 border rounded cursor-pointer"
+          >
+            EN
+          </button>
+        </div>
+
+        <!-- Large screens: Logo then Menu Links then Language -->
+        <div class="hidden md:flex md:items-center md:justify-between w-full">
+          <!-- Logo -->
+          <a title="home page" href="../index.html" class="size-16"
+            ><img
+              decoding="async"
+              src="../assets/product/logo.webp"
+              class="w-full h-full rounded-full"
+              alt="logo"
+          /></a>
+          <!-- Menu Links -->
+          <ul id="lg-menu" class="flex space-x-6 mr-8">
+            <li>
+              <a
+                title="home page"
+                href="../index.html"
+                class="hover:text-white"
+                data-key="nav_main"
+                >الرئيسية</a
+              >
+            </li>
+            <li>
+              <a
+                title="about page"
+                href="about.html"
+                class="hover:text-white"
+                data-key="nav_about"
+                >من نحن</a
+              >
+            </li>
+            <li>
+              <a
+                title="product page"
+                href="product.html"
+                class="hover:text-white"
+                data-key="nav_products"
+                >المنتجات</a
+              >
+            </li>
+            <li>
+              <a
+                title="jobs page"
+                href="jobs.html"
+                class="hover:text-white"
+                data-key="nav_jobs"
+                >الوظائف</a
+              >
+            </li>
+            <li>
+              <a
+                title="quality page"
+                href="quality.html"
+                class="hover:text-white"
+                data-key="nav_quality"
+                >الجودة</a
+              >
+            </li>
+            <li>
+              <a
+                title="contact-us page"
+                href="contact.html"
+                class="hover:text-white"
+                data-key="nav_contact"
+                >تواصل معنا</a
+              >
+            </li>
+          </ul>
+          <!-- Language -->
+          <button
+            id="langButtonLg"
+            class="langBtn px-2 py-1 border rounded cursor-pointer"
+          >
+            EN
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Overlay + blur -->
+    <div
+      id="menu-overlay"
+      class="fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 z-40 md:hidden"
+    ></div>
+    <!-- Mobile Fullscreen Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-transparent mt-24 z-50 md:hidden flex flex-col transform translate-y-full opacity-0 transition-all duration-300"
+    >
+      <div class="flex justify-between items-center px-6 py-4 shadow-md">
+        <span class="font-bold text-accent text-lg" data-key="menuhead"
+          >القائمة</span
+        >
+        <button
+          id="close-btn"
+          class="text-3xl cursor-pointer text-accent leading-none"
+        >
+          &times;
+        </button>
+      </div>
+      <ul class="flex flex-col gap-6 text-center mt-10 text-lg font-medium">
+        <li>
+          <a
+            title="main page"
+            href="../index.html"
+            data-key="nav_main"
+            class="transition hover:text-accent"
+            >الرئيسية</a
+          >
+        </li>
+        <li>
+          <a
+            title="about page"
+            href="about.html"
+            data-key="nav_about"
+            class="transition hover:text-accent"
+            >من نحن</a
+          >
+        </li>
+        <li>
+          <a
+            title="product page"
+            href="product.html"
+            data-key="nav_products"
+            class="transition hover:text-accent"
+            >المنتجات</a
+          >
+        </li>
+        <li>
+          <a
+            title="jobs page"
+            href="jobs.html"
+            data-key="nav_jobs"
+            class="transition hover:text-accent"
+            >الوظائف</a
+          >
+        </li>
+        <li>
+          <a
+            title="quality page"
+            href="quality.html"
+            data-key="nav_quality"
+            class="transition hover:text-accent"
+            >الجودة</a
+          >
+        </li>
+        <li>
+          <a
+            title="contact page"
+            href="contact.html"
+            data-key="nav_contact"
+            class="transition hover:text-accent"
+            >تواصل معنا</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- main section  -->
+
+    <main>
+      <!-- contact details  -->
+
+      <div class="contactDetail bg-primaryLight">
+        <div class="container">
+          <h2
+            class="w-full text-4xl font-bold text-accent py-8"
+            data-key="contact_main_h"
+          >
+            تواصل معنا
+          </h2>
+          <p class="text-primary" data-key="contact_main_one_p">
+            نحن دائمًا في خدمتك.
+          </p>
+          <p class="text-primary" data-key="contact_main_two_p">
+            لا تتردد في التواصل معنا لأي استفسار أو طلب توريد، وسنكون سعداء
+            بالرد عليك.
+          </p>
+          <p class="text-accent py-2" data-key="contact_main_three_p">
+            بيانات التواصل
+          </p>
+          <ul class="pb-5">
+            <li class="text-primary" data-key="contact_phone">
+              الهاتف: 01033091778 / 01070778612
+            </li>
+            <li class="text-primary" data-key="contact_whatsapp">
+              واتساب: 01033091778 / 01070778612
+            </li>
+            <li class="text-primary" data-key="contact_email">
+              البريد الإلكتروني: alburaqmill1@gmail.com
+            </li>
+            <li class="text-primary" data-key="contact_address">
+              العنوان: مركز المنيا,المنيا الجديدة, المنطقة الصناعية, بجوار
+              المعهد العالي للنظم و المعلومات (EST)
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- forms  -->
+      <div class="forms">
+        <div class="container">
+          <section class="max-w-6xl mx-auto px-4 py-12">
+            <h2
+              class="text-3xl text-primary font-bold text-center mb-10"
+              data-key="contact_order_price"
+            >
+              طلب عرض سعر
+            </h2>
+
+            <div class="grid grid-cols-1 text-primary md:grid-cols-2 gap-10">
+              <!-- المنتجات -->
+              <div class="space-y-4">
+                <h3 class="text-xl font-bold mb-4" data-key="contact_form_h">
+                  اختر المنتجات والكميات بعدد الشكائر
+                </h3>
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                  <!-- كروت المنتجات -->
+                  <!-- PRODUCT CARD -->
+                  <div class="product-card" data-product="دقيق">
+                    <h4 class="font-bold mb-3" data-key="flour">دقيق</h4>
+                    <div class="space-y-2">
+                      <select class="bag-weight w-full border p-2 rounded">
+                        <option value="" data-key="sack_weight">
+                          وزن الشيكارة
+                        </option>
+                        <option value="10 كيلو">10 كيلو</option>
+                        <option value="25 كيلو">25 كيلو</option>
+                        <option value="50 كيلو">50 كيلو</option>
+                      </select>
+                      <select class="bag-type w-full border p-2 rounded">
+                        <option value="" data-key="sack_kind">
+                          نوع الشيكارة
+                        </option>
+                      </select>
+                      <input
+                        type="number"
+                        min="1"
+                        placeholder="عدد الشكاير"
+                        class="bag-qty w-full border p-2 rounded"
+                      />
+                      <button
+                        type="button"
+                        class="add-product bg-accent text-white w-full py-2 rounded"
+                        data-key="sack_add"
+                      >
+                        إضافة
+                      </button>
+                    </div>
+                  </div>
+                  <!-- PRODUCT CARD -->
+                  <div class="product-card" data-product="ردة">
+                    <h4 class="font-bold mb-3" data-key="bran">ردة</h4>
+                    <div class="space-y-2">
+                      <select class="bag-weight w-full border p-2 rounded">
+                        <option value="" data-key="sack_weight">
+                          وزن الشيكارة
+                        </option>
+                        <option value="30 كيلو">30 كيلو</option>
+                        <option value="35 كيلو">35 كيلو</option>
+                        <option value="40 كيلو">40 كيلو</option>
+                      </select>
+                      <select class="bag-type w-full border p-2 rounded">
+                        <option value="" data-key="bran_kind">نوع الردة</option>
+                        <option value="خشنة" data-key="coarse">ردة خشنة</option>
+                        <option value="ناعمة" data-key="fine">ردة ناعمة</option>
+                      </select>
+                      <input
+                        type="number"
+                        min="1"
+                        placeholder="عدد الشكاير"
+                        class="bag-qty w-full border p-2 rounded"
+                      />
+                      <button
+                        type="button"
+                        class="add-product bg-accent text-white w-full py-2 rounded"
+                        data-key="sack_add"
+                      >
+                        إضافة
+                      </button>
+                    </div>
+                  </div>
+                  <!-- PRODUCT CARD -->
+                  <div class="product-card" data-product="سميد">
+                    <h4 class="font-bold mb-3" data-key="semolina">سميد</h4>
+                    <div class="space-y-2">
+                      <select class="bag-weight w-full border p-2 rounded">
+                        <option value="" data-key="sack_weight">
+                          وزن الشيكارة
+                        </option>
+                        <option value="10 كيلو">10 كيلو</option>
+                        <option value="50 كيلو">50 كيلو</option>
+                      </select>
+                      <select class="bag-type w-full border p-2 rounded">
+                        <option value="" data-key="sack_kind">
+                          نوع الشيكارة
+                        </option>
+                        <option value="البراق" data-key="alburaq">
+                          البراق
+                        </option>
+                      </select>
+                      <input
+                        type="number"
+                        min="1"
+                        placeholder="عدد الشكاير"
+                        class="bag-qty w-full border p-2 rounded"
+                      />
+                      <button
+                        type="button"
+                        class="add-product bg-accent text-white w-full py-2 rounded"
+                        data-key="sack_add"
+                      >
+                        إضافة
+                      </button>
+                    </div>
+                  </div>
+                  <!-- PRODUCT CARD -->
+                  <div class="product-card" data-product="سن">
+                    <h4 class="font-bold mb-3" data-key="wheat_shorts">سن</h4>
+                    <div class="space-y-2">
+                      <select class="bag-weight w-full border p-2 rounded">
+                        <option value="" data-key="sack_weight">
+                          وزن الشيكارة
+                        </option>
+                        <option value="40 كيلو">40 كيلو</option>
+                        <option value="50 كيلو">50 كيلو</option>
+                      </select>
+                      <select class="bag-type w-full border p-2 rounded">
+                        <option value="" data-key="sack_kind">
+                          نوع الشيكارة
+                        </option>
+                        <option value="البراق" data-key="alburaq">
+                          البراق
+                        </option>
+                      </select>
+                      <input
+                        type="number"
+                        min="1"
+                        placeholder="عدد الشكاير"
+                        class="bag-qty w-full border p-2 rounded"
+                      />
+                      <button
+                        type="button"
+                        class="add-product bg-accent text-white w-full py-2 rounded"
+                        data-key="sack_add"
+                      >
+                        إضافة
+                      </button>
+                    </div>
+                  </div>
+                  <!-- selected item box   -->
+                  <div class="mt-8">
+                    <h3 class="font-bold mb-3" data-key="chosen_obj">
+                      المنتجات المختارة
+                    </h3>
+                    <div
+                      id="selectedProducts"
+                      class="grid grid-cols-1 gap-3 mt-4"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- الفورم -->
+              <form
+                action="https://formsubmit.co/alburaqmill1@gmail.com"
+                method="POST"
+                class="bg-white p-8 rounded-xl shadow-lg space-y-5"
+              >
+                <div>
+                  <label class="block mb-1 font-medium" data-key="form_name"
+                    >الاسم</label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-accent outline-none"
+                  />
+                </div>
+                <div>
+                  <label class="block mb-1 font-medium" data-key="form_email"
+                    >البريد الإلكتروني</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="example@email.com"
+                    class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-accent outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label class="block mb-1 font-medium" data-key="form_phone"
+                    >رقم الهاتف</label
+                  >
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-accent outline-none"
+                  />
+                </div>
+                <div>
+                  <label class="block mb-1 font-medium" data-key="form_date"
+                    >تاريخ يوم الاستلام</label
+                  >
+                  <input
+                    type="date"
+                    name="date"
+                    class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-accent outline-none"
+                  />
+                </div>
+                <div>
+                  <label class="block mb-1 font-medium" data-key="form_time"
+                    >ميعاد الاستلام بالساعة</label
+                  >
+                  <input
+                    type="time"
+                    name="time"
+                    class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-accent outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label class="block mb-1 font-medium" data-key="form_kind"
+                    >نوع النشاط</label
+                  >
+                  <input
+                    type="text"
+                    name="business"
+                    placeholder="مخبز / مصنع / تاجر"
+                    class="w-full border rounded-lg p-3"
+                  />
+                </div>
+
+                <div>
+                  <label class="block mb-1 font-medium" data-key="form_notes"
+                    >ملاحظات إضافية</label
+                  >
+                  <textarea
+                    name="notes"
+                    rows="4"
+                    class="w-full border rounded-lg p-3"
+                    placeholder="الكميات بالصنف و الطن"
+                  ></textarea>
+                </div>
+
+                <!-- المنتجات المختارة -->
+                <input type="hidden" name="products" id="productsData" />
+
+                <button
+                  type="submit"
+                  data-key="form_submit"
+                  class="w-full bg-accent hover:bg-amber-600 text-white py-3 rounded-lg font-semibold transition"
+                >
+                  إرسال الطلب
+                </button>
+                <button
+                  id="sendToWhatsApp"
+                  data-key="form_submit_ws"
+                  class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold transition"
+                >
+                  إرسال الطلب على الواتساب
+                </button>
+              </form>
+            </div>
+            <p class="text-sm text-gray-600 mt-4" data-key="form_end">
+              ✔ تحديد الكميات يساعدنا على تقديم عرض سعر أدق
+            </p>
+          </section>
+        </div>
+      </div>
+      <!-- scroll to top button  -->
+      <button
+        id="scrollToTop"
+        class="fixed bottom-8 right-8 cursor-pointer rounded-full shadow-lg hover:bg-primaryLight bg-primary transition-all duration-300 hidden z-40 p-5 size-fit"
+        title="Scroll to Top"
+      >
+        <i
+          class="fa-solid fa-angles-up text-accent absolute top-1/2 left-1/2 -translate-1/2 text-2xl"
+        ></i>
+      </button>
+    </main>
+
+    <!-- Footer -->
+    <footer class="flex flex-col w-full">
+      <div
+        class="up bg-primaryLight flex flex-col justify-evenly items-center p-2 sm:flex-row sm:justify-evenly"
+      >
+        <div class="whoAreWe mb-5 sm:mb-0 sm:w-1/4">
+          <h3 class="text-accent font-bold" data-key="footer_up_heading">
+            مطحن البراق
+          </h3>
+          <p
+            class="text-textDark text-sm leading-8"
+            data-key="footer_up_paragraph"
+          >
+            تم تأسيس المطحن عام 2020م و خلال فترة قصيرة صار من المصانع الرائدة
+            في إنتاج الدقيق و الردة بجودة عالية و بتقنيات حديثة.
+          </p>
+        </div>
+        <div class="mapInfo mb-5 sm:mb-0 sm:w-1/4">
+          <div class="w-full h-60 rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3521.8362723589485!2d30.862760200000007!3d28.0294796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b291740996121%3A0x77b0e77ff1ab99be!2z2LTYsdmD2Kkg2YXYt9it2YYg2KfZhNio2LHYp9mC!5e0!3m2!1sen!2seg!4v1769190217300!5m2!1sen!2seg"
+              class="w-full h-full border-0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="our factory location"
+            >
+              ></iframe
+            >
+          </div>
+        </div>
+        <div
+          class="ourContactInfo flex flex-col justify-evenly items-center sm:w-1/4"
+        >
+          <p class="text-primary mb-1">alburaqmill1@gmail.com</p>
+          <p class="text-primary mb-1">201033091778+</p>
+          <p
+            class="text-primary mb-1 text-sm leading-8"
+            data-key="footer_down_address"
+          >
+            مركز المنيا,المنيا الجديدة, المنطقة الصناعية, بجوار المعهد العالي
+            للنظم و المعلومات (EST)
+          </p>
+          <div
+            class="socialMedia flex flex-row justify-center items-center gap-4"
+          >
+            <a
+              title="our facebook page"
+              class="transition-all text-xl text-primary hover:text-accent"
+              target="_blank"
+              href="https://www.facebook.com/p/%D9%85%D8%B7%D8%AD%D9%86-%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%82-100092138415311/?locale=ar_AR"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              title="our linkedin page"
+              class="transition-all text-xl text-primary hover:text-accent"
+              target="_blank"
+              href="https://www.linkedin.com/company/alburaq/"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              title="to our whatsapp chat"
+              class="transition-all text-xl text-primary hover:text-accent"
+              target="_blank"
+              href="https://wa.me/201033091778?text=السلام%20عليكم%20مطلوب%20استفسار%20عن%20المنتجات"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="down bg-primary text-accent text-center py-6 font-bold">
+        Copyright &copy; 2026 Muhammad Fakhry
+      </div>
+    </footer>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/contact.js"></script>
+  </body>
+</html>
