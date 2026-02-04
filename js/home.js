@@ -43,10 +43,10 @@ window.addEventListener("scroll", () => {
 //hero background change
 // Hero background images
 const bgArr = [
-  "../assets/mainsec.webp",
-  "../assets/wheat.webp",
-  "../assets/clyinders.webp",
-  "../assets/All-about-grain-flours-resized.webp",
+  "assets/mainsec.webp",
+  "assets/wheat.webp",
+  "assets/clyinders.webp",
+  "assets/All-about-grain-flours-resized.webp",
 ];
 
 // preload images
