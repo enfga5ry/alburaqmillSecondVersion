@@ -1,14 +1,14 @@
 [
   { "id": 1, "title": "مهندس صيانة كهربائية","title_en" : "Electrical Maintenance Engineer", "available": false },
   { "id": 2, "title": "مهندس صيانة ميكانيكية","title_en" : "Mechanical Maintenance Engineer", "available": false },
-  { "id": 3, "title": "مهندس انتاج", "title_en" : "Production Engineer", "available": false },
+  { "id": 3, "title": "مهندس زراعة", "title_en" : "Production Engineer", "available": true },
   { "id": 4, "title": "محاسب", "title_en" : "Accountant", "available": false },
   { "id": 5, "title": "فني صيانة كهربائية", "title_en" : "Electrical Technician", "available": true },
   { "id": 6, "title": "فني صيانة ميكانيكة", "title_en" : "Mechanical Technician", "available": false },
-  { "id": 7, "title": "موظف اداري", "title_en" : "Administrative employee", "available": true },
+  { "id": 7, "title": "موظف اداري", "title_en" : "Administrative employee", "available": false },
   { "id": 8, "title": "موظف مبيعات", "title_en" : "Sales employee", "available": false },
-  { "id": 9, "title": "مسؤول مخازن", "title_en" : "Storekeeper", "available": true },
-  { "id": 10, "title": "مشرف انتاج", "title_en" : "Production Supervisor", "available": false },
+  { "id": 9, "title": "أمين مخازن", "title_en" : "Storekeeper", "available": true },
+  { "id": 10, "title": "مشرف انتاج", "title_en" : "Production Supervisor", "available": true },
   { "id": 11, "title": "عامل انتاج", "title_en" : "Production Worker", "available": false },
   { "id": 12, "title": "عامل نظافة", "title_en" : "Cleaning Worker", "available": false }
 ]
